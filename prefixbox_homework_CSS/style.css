@@ -47,7 +47,7 @@ input#keyword:focus{
     text-align: left;
     position: absolute;
     font-family: 'Montserrat', sans-serif;
-    width: 100%;
+    width: 120%;
     top:44px;
 }   
    .prefixbox-autocomplete-container.open {
@@ -178,4 +178,10 @@ input#keyword:focus{
 ::-webkit-scrollbar-button{
     display: none;
     visibility: hidden;
+}
+.prefixbox-autocomplete-product-container:hover{
+    border: 2px solid #1abc9c;
+    border-radius: 5%;
+    margin-top: 2%;
+    padding-top: 2%;
 }
