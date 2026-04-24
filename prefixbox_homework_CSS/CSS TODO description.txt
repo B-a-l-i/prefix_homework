@@ -1,0 +1,19 @@
+Prefixbox CSS Task:
+
+
+Opening the "autocomplete.html" file in a browser reveals the basic version of the Prefixbox Autocomplete module with a 2-column display.
+
+Your task is to create an Autocomplete design based on the attached three images ("final_1.png", "final_2.png", "final_mobile.png"), working exclusively within the "style.css" file. Please refrain from modifying the "autocomplete.html" file.
+• In "final_1.png", as seen, when hovering over the keyword suggestion, the background turns white, and the keyword moves inward.
+• In "final_2.png", when hovering over the product suggestion, a different display should be applied.
+• Responsiveness is crucial; therefore, on mobile, instead of the 2-column display, a 1-column display should be implemented as shown in the "mobile_final" image. Here, the search field size, font sizes, and Autocomplete width differ.
+
+The colors used in the task:
+• #1abc9c
+• #ff0000
+• #000
+• #fff
+
+The font types used in the task:
+• Montserrat
+• Arial

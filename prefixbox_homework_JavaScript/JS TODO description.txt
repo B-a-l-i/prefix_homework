@@ -1,0 +1,12 @@
+Prefixbox JS Task:
+
+
+When you open “result_page.html” in a browser, you will see a search results page with 6 products.
+
+Your task will be to make the “Show only discounted products” checkbox and the sorting dropdown functional on the page.
+
+In the folder, you will also find two GIFs. By opening these, you can see the expected functionality.
+
+(“1_only_discounted_products.gif”, “2_sorting.html”)
+
+Preferably, do not modify the HTML file!
