@@ -40,7 +40,8 @@ input#keyword:focus{
     margin: 0;
     display: flex;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 3px solid #1abc9c;
+    border-radius: 1%;
     box-sizing: border-box;
     z-index: 62;
     text-align: left;
@@ -57,18 +58,34 @@ input#keyword:focus{
     }
 
 .prefixbox-autocomplete-container .col-1 {
-    width: 50%;
+    width: 30%;
 }
 .prefixbox-autocomplete-container .col-2 {
-    width: 50%;
+    width: 70%;
     background:#fff;
 }
 .prefixbox-autocomplete-container .prefixbox-autocomplete-keyword-container {
-    color: #000;
+    color: #fff;
     font-size: 14px;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
+    font-weight: 100;
+    block-size: 5%;
+    padding: 5px 12px !important;
+    background-image: none !important;
+    transition: all ease-in-out .2s !important;
 }
 .prefixbox-autocomplete-container .prefixbox-autocomplete-keyword-container:hover{
-    background-color: gray;
+    text-indent: 5%;
+    /* background-color: gray;
+    border: 10px solid white; */
+    border-radius: 10%;
+    border-width: 5%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.185); /*update color*/
+    padding: 5px 12px;
+    border-radius: 50px;
+    transition: all ease-in-out .2s !important;
 }
 .prefixbox-group-2-title.pfbx-group-title {
     display: none;
@@ -81,9 +98,13 @@ input#keyword:focus{
     padding: 10px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
 }
 .prefixbox-autocomplete-left {
-    width: 33%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,14 +112,16 @@ input#keyword:focus{
 .prefixbox-autocomplete-left img {
     max-width: 80px;
     max-height: 80px;
+    min-width: 80px;
+    min-height: 80px;
 }
 .prefixbox-autocomplete-body {
-    width: 52%;
+    width: 100%;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 }
 .prefixbox-autocomplete-right {
-    width: 15%;
+    width: 100%;
     font-size: 12px;
 }
 .prefixbox-autocomplete-right span{
@@ -118,4 +141,41 @@ input#keyword:focus{
         margin:0;
     }
 
+}
+
+/*Solution*/
+
+.col-1{
+    background-color: #1abc9c;
+    color: #fff;
+}
+.group-id-1{
+    color: #fff;
+}
+#prefixbox-autocomplete-0{
+    /* color: red; */
+}
+.prefixbox-autocomplete-keyword-container{
+    color: #fff;
+}
+.prefixbox-sale-price{
+    color: red;
+}
+.prefixbox-old-price{
+    text-decoration: line-through;
+}
+.prefixbox-regular-price{
+    color: #1abc9c;
+}
+.group-id-2{
+    overflow-y: scroll;
+    scrollbar-color: #1abc9c;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: stretch;
+}
+::-webkit-scrollbar-button{
+    display: none;
+    visibility: hidden;
 }
