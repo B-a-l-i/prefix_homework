@@ -73,9 +73,9 @@ input#keyword:focus{
     border-bottom: 1px solid gray;
     box-sizing: border-box;
     font-weight: 100;
-    padding: 5px 12px !important;
-    background-image: none !important;
-    transition: all ease-in-out .2s !important;
+    padding: 5px 12px;
+    background-image: none;
+    transition: all ease-in-out .2s;
 }
 .prefixbox-autocomplete-container .prefixbox-autocomplete-keyword-container:hover{
     text-indent: 5%;
@@ -85,7 +85,7 @@ input#keyword:focus{
     background: rgba(255, 255, 255, 0.185); /*update color*/
     padding: 5px 12px;
     border-radius: 50px;
-    transition: all ease-in-out .2s !important;
+    transition: all ease-in-out .2s;
 }
 .prefixbox-group-2-title.pfbx-group-title {
     display: none;
@@ -144,7 +144,7 @@ input#keyword:focus{
     vertical-align: top;
 }
 .prefixbox-sale-price{
-    color: red;
+    color: #ff0000;
 }
 .prefixbox-old-price{
     text-decoration: line-through;
