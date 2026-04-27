@@ -1,10 +1,10 @@
 //---TASK 1---//
 let discontinuedCheck= document.querySelector('.sale')
-let products= document.querySelectorAll('.product')
+let product= document.querySelectorAll('.product')
 let order= document.querySelector('.order')
-let productsArray = Array.from(products);
+let productArray = Array.from(product);
 let offerArray=[];
-productsArray.forEach(product => {
+productArray.forEach(product => {
     const oldPrice = product.querySelector('.product-old-price');
 
     if (!oldPrice) {
@@ -28,31 +28,50 @@ else
 })
 
 //---TASK 2---//
-let priceArray=[];
-productsArray.forEach(product => {
-    const price = product.querySelector('.product-price');
-    priceArray.push(price)
-});
-let sorted=priceArray.toSorted();
-let sortedDesc=sorted.toReversed();
-console.log(sorted)
-console.log(sortedDesc)
+let productsContainer=document.querySelector('.products')
+function getPrice(product){
+    const priceText = product.querySelector('.product-price').innerText
+
+    return Number(priceText.replace('Ft','').replace(/\./g,'').trim())
+}
+
+function getName(product){
+    return product.querySelector('.product-name').innerText.toLowerCase()
+}
+
 order.addEventListener('change', function() {
-    let value=this.value
-    switch (value) {
+    let products = Array.from(
+        document.querySelectorAll('.product')
+    )
+    switch (this.value) {
+        //Ár szerint csökkenő
         case "0":
-            console.log('nov')
+            products.sort((a,b) =>
+                getPrice(a) - getPrice(b)
+            )
             break;
+        //Ár szerint növekvő
         case "1":
-            console.log('csok')
+            products.sort((a,b) =>
+                getPrice(b) - getPrice(a)
+            )
             break;
+        //ABC növekvő
         case "2":
-
+            products.sort((a,b) =>
+                getName(a).localeCompare(getName(b))
+            )
             break;
+        //ABC csökkenő
         case "3":
-
+            products.sort((a,b) =>
+                getName(b).localeCompare(getName(a))
+            )
             break;
         default:
             break;
     }
+    products.forEach(product =>{
+        productsContainer.appendChild(product)
+    })
 })
